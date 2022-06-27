@@ -3,9 +3,12 @@ import {BsPerson} from 'react-icons/bs';
 import {GoLocation} from 'react-icons/go';
 import {AiOutlineMail} from 'react-icons/ai';
 import {MdOutlineCall} from 'react-icons/md';
-import { postApi } from '../postApi';
+import { useContext } from 'react';
+import { Appcontext } from '../context/Appcontext';
+import styles from '../styles/components/Form.module.scss';
 
 const Form = () => {
+  const {addContact,setModalAdd}=useContext(Appcontext);
   const [forName, setFormName]= useState('');
   const [forPhone, setFormPhone]= useState('');
   const [formAge, setFormAge]= useState('');
@@ -45,45 +48,53 @@ const Form = () => {
       phone: forPhone,
       name: forName
     }
-    const APIPost = 'http://localhost:4000/products';
-    postApi(APIPost,object);
+    addContact(object);
+  }
+  const handleClick = () => {
+    setModalAdd(false);
   }
 
   return (
-    <div>
-      <form className='' onSubmit={onSubmit} autoComplete="on">
+    
+    <form className={styles.container} onSubmit={onSubmit} autoComplete="on">
+      
+      <h2>Crear contacto nuevo</h2>
 
-        <h2>Crear contacto nuevo</h2>
+      <label form='name'>
+        <span><BsPerson/></span>
+        <input name='name' id='name' required type="text" placeholder='Nombre completo'  onChange={event => setFormName(event.target.value)}/>
+      </label>
 
-        <label form='name'>
-          <span><BsPerson/></span>
-          <input name='name' id='name' required type="text"  onChange={event => setFormName(event.target.value)}/>
-        </label>
+      <label form='phone'>
+        <span><MdOutlineCall/></span>
+        <input name='phone' id='phone' required type="tel" placeholder='Telefono' onChange={event => setFormPhone(event.target.value)}/>
+      </label>
 
-        <label form='phone'>
-          <span><MdOutlineCall/></span>
-          <input name='phone' id='phone' required type="tel"  onChange={event => setFormPhone(event.target.value)}/>
-        </label>
+      <label form='dateBirth'>
+        <fieldset>
+        <legend>Fecha de nacimiento</legend>
+        <input name='dateBirth' id='dateBirth' required type="date"  onChange={event => getAge(event.target.value)}/>
 
-        <label form='dateBirth'>
-          <span>Fecha de nacimiento</span>
-          <input name='dateBirth' id='dateBirth' required type="date"  onChange={event => getAge(event.target.value)}/>
-        </label>
+        </fieldset>
+      </label>
 
-        <label form='addres'>
-          <span><GoLocation/></span>
-          <input name='addres' id='addres'  type="text" required placeholder='Direccion de residencia' onChange={event => setFormAddres(event.target.value)}/>
-        </label>
+      <label form='addres'>
+        <span><GoLocation/></span>
+        <input name='addres' id='addres'  type="text" required placeholder='Direccion de residencia' onChange={event => setFormAddres(event.target.value)}/>
+      </label>
 
-        <label form='email'>
-          <span><AiOutlineMail/></span>
-          <input name='email' id='email'  type="email" required placeholder='Correo electronico' onChange={event => setFormEmail(event.target.value)} />
-        </label>
+      <label form='email'>
+        <span><AiOutlineMail/></span>
+        <input name='email' id='email'  type="email" required placeholder='Correo electronico' onChange={event => setFormEmail(event.target.value)} />
+      </label>
+      <div className="container-button">
 
         <button type="submit">Añadir</button>
+        <button onClick={() => handleClick()}>Cancelar</button>
+      </div>
 
-      </form>
-    </div>
+    </form>
+  
   )
 }
 

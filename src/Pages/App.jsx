@@ -1,5 +1,3 @@
-
-import '../App.css';
 import { useCrud} from '../hook/useCrud';
 import { Appcontext } from '../context/Appcontext';
 import { Layout } from './Layout';

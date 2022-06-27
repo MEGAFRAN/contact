@@ -1,12 +1,31 @@
 {
   "products": [
     {
+      "email": "r-0-ger.1@hotmail.com",
+      "addres": "Av 22 # 21-50 Gaitán",
+      "dateofbirth": "2018-01-23",
+      "age": 4,
+      "phone": "3153030912",
       "name": "Roger David Alba Ortega",
-      "phone": 3153030912,
-      "dateofbirth": "24/01/1994",
-      "addres": "Avenida 21b # 12-96 Apto 201",
-      "email": "rogerdavidalbaortega@gmail.com",
       "id": 1
+    },
+    {
+      "email": "astrid1_16@hotmail.com",
+      "addres": "Av 21b # 12-96",
+      "dateofbirth": "1991-09-30",
+      "age": 30,
+      "phone": "3173764754",
+      "name": "Astrid Villamizar",
+      "id": 2
+    },
+    {
+      "email": "r-0-ger.1@hotmail.com",
+      "addres": "Av 22 # 21-50 Gaitán",
+      "dateofbirth": "2000-03-27",
+      "age": 22,
+      "phone": "3153030912",
+      "name": "Roger David Alba Ortega",
+      "id": 3
     }
   ]
 }
