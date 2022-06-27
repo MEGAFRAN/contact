@@ -1,0 +1,74 @@
+@import '../abstracs/colors.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 36rem;
+    background-color: $primary-white;
+    row-gap: 1rem;
+    color: $text-color;
+    font-weight: 900;
+    font-size: clamp(8px,2vw,16px);
+    box-shadow: 0px 6px 11px $primary-white;
+    border-radius: 1rem;
+
+    & > h2 {
+        background-color: $background-blue;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        color: $primary-white;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    & > label{
+        & > span {
+
+        }
+        
+        & > fieldset{
+            width: 32rem;
+            font-size: 1rem;
+            & > input {
+                margin-left: 1rem;
+            }
+        }
+
+        & > input {
+            width: 30rem;
+            &::placeholder{
+                text-transform: capitalize;
+                text-align: center;
+                color: $title-color;
+                font-weight: 900;
+            }
+        }
+    }
+
+    & > div {
+        display: flex;
+        width: inherit;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+
+        & > button {
+            background-color: $button-color;
+            color: $primary-white;
+            border-block-color: gray;
+            display: flex;
+            margin: 2rem auto;
+            width: clamp(10rem, 50vw, 15rem);
+            border-radius: 1rem;
+            justify-content: center;
+            &:hover{
+                background-color: $button-hover;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}

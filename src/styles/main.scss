@@ -1,0 +1,15 @@
+@import './abstracs/colors.scss';
+
+@import 
+'./containers/reset.module',
+'./containers/Header.module.scss',
+'./components/Search.module.scss',
+'./containers/Contact.module.scss',
+'./components/ListTitle.module.scss',
+'./components/ListContact.module.scss',
+'./modals/ModalAdd.module.scss',
+'./modals/ModalEdit.module.scss',
+'./components/Button.module.scss',
+'./components/Table.module.scss',
+'./components/Form.module.scss',
+'./components/Edit.module.scss';

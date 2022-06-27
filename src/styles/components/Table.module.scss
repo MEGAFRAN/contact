@@ -1,0 +1,37 @@
+@import '../abstracs/colors.scss';
+
+.container{
+    border-collapse: separate;
+    text-align: center;
+    // border: solid 1px black;
+    .title{
+        border: solid 1px black;
+        background-color: $background-blue;
+        color: $primary-white;
+        font-size: clamp(8px,2vw,16px);
+    }
+    .content{
+        color: $text-color;
+        font-weight: 900;
+        font-size: clamp(8px,2vw,16px);
+        border-collapse: separate;
+        border: solid 1px black;
+        .icons{
+            border: solid 1px black;
+            align-content: center;
+            text-align: center;
+            align-items: center;
+            & > div{
+                & > svg{
+                    color: $button-color;
+                    &:hover{
+                        color: $button-hover;
+                        cursor: pointer;
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+
+}
