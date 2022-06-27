@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from './Pages/App';
 
-test('renders learn react link', () => {
+//Pruebas de integracion
+
+test('Debe mostrar el header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = screen.getByText(/Agenda de contactos/i);
+  expect(headerElement).toBeInTheDocument();
+});
+
+test('Debe mostrar el boton para añadir usuarios', () => {
+  render(<App />);
+  const addUserButtonElement = screen.getByText(/Añadir/i);
+  expect(addUserButtonElement).toBeInTheDocument();
 });
