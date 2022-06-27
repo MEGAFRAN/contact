@@ -1,13 +1,15 @@
 @import '../abstracs/colors.scss';
 
 .container{
-    background-color: $button-color;
+    background-color: $background-blue;
     color: $primary-white;
-    border-block-color: gray;
     display: flex;
     margin: 2rem auto;
     width: clamp(10rem, 50vw, 15rem);
-    border-radius: 1rem;
+    border-radius: 3rem;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
     justify-content: center;
     &:hover{
         background-color: $button-hover;

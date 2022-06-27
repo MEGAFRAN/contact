@@ -8,14 +8,15 @@
         border: solid 1px black;
         background-color: $background-blue;
         color: $primary-white;
-        font-size: clamp(8px,2vw,16px);
+        font-size: clamp(12px,2vw,16px);
     }
     .content{
-        color: $text-color;
+        color: $primary-black;
         font-weight: 900;
-        font-size: clamp(8px,2vw,16px);
+        font-size: clamp(12px,2vw,16px);
         border-collapse: separate;
         border: solid 1px black;
+        padding: 14px;
         .icons{
             border: solid 1px black;
             align-content: center;
@@ -23,7 +24,8 @@
             align-items: center;
             & > div{
                 & > svg{
-                    color: $button-color;
+                    color: $background-blue;
+                    font-size: 22px;
                     &:hover{
                         color: $button-hover;
                         cursor: pointer;
@@ -32,6 +34,10 @@
                 }
             }
         }
+    }
+
+    th{
+        padding: 6px;
     }
 
 }

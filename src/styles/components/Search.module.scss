@@ -7,17 +7,21 @@
     margin: 2rem 0;
     & > input{
         width: clamp(29rem, 50vw, 80rem);
-        border: solid 3px $text-color;
+        border: solid 2px $text-color;
         border-radius: 30px;
         padding: 7px 14px;
-        background-color: $background-blue;
-        box-shadow: 0px 6px 11px $text-color;
-        color: $primary-white;
+        background-color: $primary-white;
+        color: $text-color;
         font-weight: 900;
+        margin: 24px 0px;
+        &:hover{
+          border: solid 2px $button-hover;
+          cursor: pointer;
+        }
         &::placeholder{
           text-transform: capitalize;
           text-align: center;
-          color: $primary-white;
+          color: $text-color;
           font-weight: 900;
         }
 
